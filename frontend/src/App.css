@@ -1,0 +1,251 @@
+/* General Styles (Dark Theme) */
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background-color: #222;
+  color: #eee;
+}
+
+/* App Container */
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Calendar Page */
+.calendar-container {
+  grid-column: span 2;
+  /* Make the calendar take the full width */
+  padding: 20px;
+  background-color: #444;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.react-calendar {
+  width: 100%;
+  max-width: 800px;
+  /* Max width for large calendar */
+  margin: 0 auto;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border: none;
+  color: #fff;
+}
+
+.react-calendar__tile {
+  background: #444;
+  border-radius: 5px;
+  color: #fff;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.react-calendar__tile:hover {
+  background: #555;
+  transform: scale(1.05);
+}
+
+.react-calendar__tile--active {
+  background: #007bff;
+  color: #fff;
+}
+
+.react-calendar__navigation button {
+  color: #fff;
+  background: #007bff;
+  border: none;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.react-calendar__navigation button:hover {
+  background: #0056b3;
+  transform: scale(1.1);
+}
+
+/* Mood Tracker */
+.mood-tracker {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #333;
+}
+
+.mood-slider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-bottom: 1px solid #444;
+}
+
+.mood-slider label {
+  text-align: center;
+  font-size: 1.2em;
+  color: #ddd;
+  margin-right: 50px;
+}
+
+.mood-slider input[type="range"] {
+  width: calc(100% - 60px);
+}
+
+.mood-slider input[type="range"]::-webkit-slider-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #666;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+/* Mood Emojis */
+.emoji {
+  font-size: 2em;
+}
+
+/* Journal and Tracker Container */
+.journal-and-tracker {
+  background-color: #333;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.journal textarea {
+  width: 100%;
+  height: 100px;
+  resize: vertical;
+  padding: 10px;
+  border: 1px solid #555;
+  background-color: #444;
+  color: #eee;
+}
+
+.datetime {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.additional-tracker h3 {
+  margin-top: 20px;
+}
+
+/* Heading */
+h1,
+h2,
+h3 {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.weight-input {
+  width: 40px;
+}
+
+.energy-slider-container {
+  width: 300px;
+  position: relative;
+}
+
+.energy-slider {
+  width: 100%;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 5px;
+  -webkit-appearance: none;
+}
+
+.energy-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #007bff;
+  cursor: pointer;
+}
+
+.energy-value {
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 10px);
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+/* Save button container */
+.save-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  /* Adjust width if necessary */
+  position: relative;
+}
+
+/* Style for the save button */
+.save-button {
+  background-color: #464646;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Style for the save button */
+.monthly-insight-button {
+  background-color: #464646;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.save-button:hover {
+  background-color: #464646;
+}
+/* styles.css */
+.chart-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  padding: 40;
+}
+
+.chart-title {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.chart-wrapper {
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.axis-label {
+  font-size: 12px;
+  fill: white;
+  /* Ensure axis label text is white */}
+
+.chart-svg {
+  border-radius: 8px;
+}
