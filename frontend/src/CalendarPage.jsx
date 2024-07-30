@@ -1,25 +1,24 @@
+// CalendarPage.jsx
 import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css'; // Import the calendar CSS
 import './App.css'; // Import your custom CSS
 import { format } from 'date-fns'; // Import date-fns for date formatting
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 
-function CalendarPage({ setSelectedDate, navigate }) {
+function CalendarPage({ setSelectedDate }) {
     const [date, setDate] = useState(new Date()); // State to track the selected date
-    const [viewDate, setViewDate] = useState(new Date()); // State to track the displayed month
+    const navigate = useNavigate(); // Hook to handle navigation
 
     const onChange = (date) => {
         setDate(date);
         setSelectedDate(date);
-        navigate(`/track/${format(date, 'yyyy-MM-dd')}`); // Navigate to mood tracker page with the selected date
-    };
-
-    const onActiveStartDateChange = ({ activeStartDate }) => {
-        setViewDate(activeStartDate); // Update the displayed month when the calendar view changes
+        // Navigate to mood tracker page with the selected date
+        navigate(`/track/${format(date, 'yyyy-MM-dd')}`);
     };
 
     const getCurrentMonth = () => {
-        return format(viewDate, 'yyyy-MM'); // Extract the displayed month in YYYY-MM format
+        return format(date, 'yyyy-MM'); // Extract the selected month in YYYY-MM format
     };
 
     const handleMonthlyInsight = () => {
@@ -33,7 +32,6 @@ function CalendarPage({ setSelectedDate, navigate }) {
             <Calendar
                 onChange={onChange}
                 value={date}
-                onActiveStartDateChange={onActiveStartDateChange} // Listen to view changes
             />
             <button className="monthly-insight-button" onClick={handleMonthlyInsight}>
                 Monthly Insight

@@ -1,26 +1,34 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
+// App.js
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CalendarPage from './CalendarPage';
-import MoodTrackerPage from './MoodTrackerPage';
 import MonthlyInsightPage from './MonthlyInsightPage';
+import MoodTrackerPage from './MoodTrackerPage';
+import './App.css'; // Include your basic styling
 
 function App() {
-  const [selectedDate, setSelectedDate] = useState(new Date());
+  const [selectedDate, setSelectedDate] = React.useState(null);
 
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<CalendarPageWrapper setSelectedDate={setSelectedDate} />} />
-        <Route path="/track/:date" element={<MoodTrackerPage date={selectedDate} />} />
-        <Route path="/insight/:month" element={<MonthlyInsightPage />} />
-      </Routes>
+      <div className="App">
+        <Routes>
+          <Route
+            path="/"
+            element={<CalendarPage setSelectedDate={setSelectedDate} />}
+          />
+          <Route
+            path="/track/:date"
+            element={<MoodTrackerPage />}
+          />
+          <Route
+            path="/insight/:month"
+            element={<MonthlyInsightPage />}
+          />
+        </Routes>
+      </div>
     </Router>
   );
-}
-
-function CalendarPageWrapper({ setSelectedDate }) {
-  const navigate = useNavigate();
-  return <CalendarPage setSelectedDate={setSelectedDate} navigate={navigate} />;
 }
 
 export default App;
