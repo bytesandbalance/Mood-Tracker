@@ -31,6 +31,14 @@ The backend is built with Flask and SQLite. The main branches are:
 2. **`database.py`**: Sets up the SQLite database and creates the necessary table.
 3. **`mood_generator.py`**: Generates sample data for populating the database (not required for your contributions).
 
+   ```
+## Dev vs Main
+
+The `dev` branch contains the basic components and structure of the application. It provides a foundation to start from. The `main` branch represents the final, polished version of the application. It includes all the features fully developed and integrated.
+
+![Dev vs Main Branch Snapshot](assets/main-dev.png)
+
+
 ## How to Contribute
 
 1. **Clone the Repository**: Clone to your local machine:
@@ -88,6 +96,6 @@ The backend is built with Flask and SQLite. The main branches are:
 4. **Run the Flask Application**:
     ```bash
     python app.py
-    ```
+
 
 Feel free to reach out if you have any questions or need help with any part of the project.
