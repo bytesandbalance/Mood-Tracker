@@ -1,4 +1,3 @@
-# backend/database_setup.py
 import sqlite3
 
 conn = sqlite3.connect("mood_tracker.db")
