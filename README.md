@@ -90,10 +90,4 @@ The backend is built with Flask and SQLite. The main branches are:
     python app.py
     ```
 
-## Tips for Development
-
-- **Branch Off `dev`**: Always branch off the `dev` branch for new features or bug fixes to ensure you start with the most current basic setup.
-- **Follow Code Standards**: Adhere to the coding standards and style guidelines provided in the project.
-- **Test Your Changes**: Test your features thoroughly before submitting a pull request.
-
 Feel free to reach out if you have any questions or need help with any part of the project.
