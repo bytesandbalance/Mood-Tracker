@@ -18,6 +18,7 @@ function App() {
   );
 }
 
+// I am writing a comment for teaching purposes
 function CalendarPageWrapper({ setSelectedDate }) {
   const navigate = useNavigate();
   return <CalendarPage setSelectedDate={setSelectedDate} navigate={navigate} />;
